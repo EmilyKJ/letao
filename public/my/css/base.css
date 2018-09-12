@@ -1,0 +1,7 @@
+.my-header {
+  background-color: #006699;
+}
+.my-header h1,
+.my-header .mui-icon {
+  color: #fff;
+}

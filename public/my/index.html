@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mymobile</title>
+    <link rel="stylesheet" href="assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="assets/fontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <script src="assets/mui/js/mui.min.js"></script>
+</head>
+<body>
+    <header class="mui-bar mui-bar-nav my-header">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <h1 class="mui-title">乐淘云购</h1>
+    </header>
+    <nav class="mui-bar mui-bar-tab footer">
+        <a class="mui-tab-item mui-active" href="index.html">
+            <span class="mui-icon mui-icon-home"></span>
+            <span class="mui-tab-label">首页</span>
+        </a>
+        <a class="mui-tab-item" href="category.html">
+            <span class="mui-icon mui-icon-bars"></span>
+            <span class="mui-tab-label">分类</span>
+        </a>
+        <a class="mui-tab-item" href="cart.html">
+            <span class="mui-icon fa fa-shopping-cart"></span>
+            <span class="mui-tab-label">购物车</span>
+        </a>
+        <a class="mui-tab-item" href="user.html">
+            <span class="mui-icon mui-icon-person"></span>
+            <span class="mui-tab-label">会员中心</span>
+        </a>
+    </nav>
+    <div class="mui-content">
+        <!--轮播图-->
+        <div class="banner">
+            <div class="mui-slider">
+                <div class="mui-slider-group mui-slider-loop">
+                    <!--支持循环，需要重复图片节点-->
+                    <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="images/banner9.png" /></a></div>
+                    <div class="mui-slider-item"><a href="#"><img src="images/banner1.png" /></a></div>
+                    <div class="mui-slider-item"><a href="#"><img src="images/banner2.png" /></a></div>
+                    <div class="mui-slider-item"><a href="#"><img src="images/banner3.png" /></a></div>
+                    <div class="mui-slider-item"><a href="#"><img src="images/banner4.png" /></a></div>
+                    <div class="mui-slider-item"><a href="#"><img src="images/banner5.png" /></a></div>
+                    <div class="mui-slider-item"><a href="#"><img src="images/banner6.png" /></a></div>
+                    <div class="mui-slider-item"><a href="#"><img src="images/banner7.png" /></a></div>
+                    <div class="mui-slider-item"><a href="#"><img src="images/banner8.jpg" /></a></div>
+                    <div class="mui-slider-item"><a href="#"><img src="images/banner9.png" /></a></div>
+                    <!--支持循环，需要重复图片节点-->
+                    <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="images/banner1.png" /></a></div>
+                </div>
+                <!--点标记-->
+                <div class="mui-slider-indicator">
+                    <div class="mui-indicator"></div>
+                    <div class="mui-indicator mui-active"></div>
+                    <div class="mui-indicator"></div>
+                    <div class="mui-indicator"></div>
+                </div>
+            </div>
+        </div>
+
+        <!--导航链接-->
+        <div class="nav-links">
+            <a href="#"><img src="./images/nav1.png" alt=""></a>
+            <a href="#"><img src="./images/nav2.png" alt=""></a>
+            <a href="#"><img src="./images/nav3.png" alt=""></a>
+            <a href="#"><img src="./images/nav4.png" alt=""></a>
+            <a href="#"><img src="./images/nav5.png" alt=""></a>
+            <a href="#"><img src="./images/nav6.png" alt=""></a>
+        </div>
+    </div>
+    <script>
+        //获得slider插件对象
+        var gallery = mui('.mui-slider');
+        gallery.slider({
+            interval:1000//自动轮播周期，若为0则不自动播放，默认为0；
+        });
+    </script>
+</body>
+</html>
