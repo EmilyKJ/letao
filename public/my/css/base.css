@@ -3,6 +3,13 @@ ul {
   margin: 0;
   list-style: none;
 }
+body,
+.mui-content {
+  background-color: #fff;
+}
+a {
+  color: #000;
+}
 .my-header {
   background-color: #006699;
 }
@@ -21,6 +28,7 @@ ul {
 }
 .nav-links {
   padding: 10px;
+  background-color: #fff;
 }
 .nav-links > a {
   width: 33.33%;
@@ -33,6 +41,7 @@ ul {
 }
 .brand {
   padding: 0 10px;
+  background-color: #fff;
 }
 .brand .title {
   width: 100%;
@@ -53,6 +62,7 @@ ul {
 }
 .product {
   padding: 0 10px;
+  background-color: #fff;
 }
 .product .title {
   width: 100%;
@@ -69,6 +79,7 @@ ul {
   display: block;
   box-shadow: 0 0 5px #ccc;
   padding: 5px;
+  background-color: #fff;
 }
 .product ul > li > a img {
   width: 100%;
