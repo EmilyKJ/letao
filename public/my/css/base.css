@@ -7,14 +7,11 @@ body,
 .mui-content {
   background-color: #fff;
 }
-a {
-  color: #000;
-}
 .my-header {
   background-color: #006699;
 }
 .my-header h1,
-.my-header .mui-icon-search {
+.my-header .mui-icon {
   color: #fff;
 }
 .my-footer {
@@ -92,6 +89,7 @@ a {
   color: #8f8f94;
   font-size: 14px;
   padding: 5px;
+  overflow: hidden;
 }
 .product ul > li > a p {
   text-align: center;

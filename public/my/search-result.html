@@ -6,10 +6,14 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="assets/mui/css/mui.min.css">
-    <!--<link rel="stylesheet" href="assets/fontAwesome/css/font-awesome.min.css">-->
+    <link rel="stylesheet" href="assets/fontAwesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/search-result.css">
     <script src="assets/mui/js/mui.min.js"></script>
+    <script src="assets/zepto/zepto.min.js"></script>
+    <script src="assets/artTemplate/template-web.js"></script>
+    <script src="js/public.js"></script>
+    <script src="js/search-result.js"></script>
 </head>
 <body>
     <header class="mui-bar mui-bar-nav my-header">
@@ -34,65 +38,50 @@
             <span class="mui-tab-label">会员中心</span>
         </a>
     </nav>
-    <div class="mui-content">
-        <div class="mui-row filter">
-            <div class="mui-col-xs-6">
-                价格
-                <span class="mui-icon mui-icon-arrowdown"></span>
+    <div class="mui-content" id="refreshContainer">
+        <div>
+            <div class="mui-row filter">
+                <div class="mui-col-xs-6" id="priceSort">
+                    价格
+                    <span class="mui-icon mui-icon-arrowdown"></span>
+                </div>
+                <div class="mui-col-xs-6" id="numSort">
+                    销量
+                    <span class="mui-icon mui-icon-arrowdown"></span>
+                </div>
             </div>
-            <div class="mui-col-xs-6">
-                销量
-                <span class="mui-icon mui-icon-arrowdown"></span>
+            <div class="product">
+                <ul class="mui-clearfix" id="search-box">
+                    <!--<li>-->
+                    <!--<a href="javascript:;">-->
+                    <!--<img src="images/product.jpg" alt="">-->
+                    <!--<span class="name">adidas阿迪达斯 男式 场下休闲篮球鞋S83700</span>-->
+                    <!--<p>-->
+                    <!--<span>¥560</span>-->
+                    <!--<span>¥888</span>-->
+                    <!--</p>-->
+                    <!--<span class="buy-now">立即购买</span>-->
+                    <!--</a>-->
+                    <!--</li>-->
+
+                </ul>
             </div>
         </div>
-       <div class="product">
-           <ul class="mui-clearfix">
-               <li>
-                   <a href="javascript:;">
-                       <img src="images/product.jpg" alt="">
-                       <span class="name">adidas阿迪达斯 男式 场下休闲篮球鞋S83700</span>
-                       <p>
-                           <span>¥560</span>
-                           <span>¥888</span>
-                       </p>
-                       <span class="buy-now">立即购买</span>
-                   </a>
-               </li>
-               <li>
-                   <a href="javascript:;">
-                       <img src="images/product.jpg" alt="">
-                       <span class="name">adidas阿迪达斯 男式 场下休闲篮球鞋S83700</span>
-                       <p>
-                           <span>¥560</span>
-                           <span>¥888</span>
-                       </p>
-                       <span class="buy-now">立即购买</span>
-                   </a>
-               </li>
-               <li>
-                   <a href="javascript:;">
-                       <img src="images/product.jpg" alt="">
-                       <span class="name">adidas阿迪达斯 男式 场下休闲篮球鞋S83700</span>
-                       <p>
-                           <span>¥560</span>
-                           <span>¥888</span>
-                       </p>
-                       <span class="buy-now">立即购买</span>
-                   </a>
-               </li>
-               <li>
-                   <a href="javascript:;">
-                       <img src="images/product.jpg" alt="">
-                       <span class="name">adidas阿迪达斯 男式 场下休闲篮球鞋S83700</span>
-                       <p>
-                           <span>¥560</span>
-                           <span>¥888</span>
-                       </p>
-                       <span class="buy-now">立即购买</span>
-                   </a>
-               </li>
-           </ul>
-       </div>
     </div>
+    <script type="text/html" id="searchTp1">
+        <% for(var i =0; i < data.length; i++) { %>
+        <li>
+            <a href="javascript:;">
+                <img src="<%= data[i].pic[0].picAddr %>" alt="">
+                <span class="name"><%= data[i].proName%></span>
+                <p>
+                    <span>¥<%= data[i].price%></span>
+                    <span>¥<%= data[i].oldPrice%></span>
+                </p>
+                <span class="buy-now">立即购买</span>
+            </a>
+        </li>
+        <% } %>
+    </script>
 </body>
 </html>

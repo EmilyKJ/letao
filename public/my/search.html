@@ -6,17 +6,18 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="assets/fontAwesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/search.css">
     <script src="assets/mui/js/mui.min.js"></script>
     <script src="assets/zepto/zepto.min.js"></script>
+    <script src="assets/artTemplate/template-web.js"></script>
+    <script src="js/public.js"></script>
     <script src="js/search.js"></script>
-
 </head>
 <body>
     <header class="mui-bar mui-bar-nav my-header">
         <h1 class="mui-title">搜索中心</h1>
-        <a href="" class="mui-icon mui-icon-search mui-pull-right"></a>
     </header>
     <nav class="mui-bar mui-bar-tab my-footer">
         <a class="mui-tab-item mui-active" href="index.html">
@@ -45,14 +46,18 @@
             </div>
             <div class="history-top mui-clearfix">
                 <span class="title mui-pull-left">搜索历史</span>
-                <span class="clear mui-pull-right mui-icon mui-icon-trash">清空历史</span>
+                <span class="clear mui-pull-right mui-icon mui-icon-trash" id="clearBtn">清空历史</span>
             </div>
-            <ul class="mui-table-view">
-                <li class="mui-table-view-cell">Item 1</li>
-                <li class="mui-table-view-cell">Item 2</li>
-                <li class="mui-table-view-cell">Item 3</li>
+            <ul class="mui-table-view" id="history-box">
+                <!--<li class="mui-table-view-cell">Item 1</li>-->
+                <!--模板信息坑-->
             </ul>
         </div>
     </div>
+    <script id="historyTpl" type="text/html">
+        <% for(var i=0; i < result.length; i ++) { %>
+            <li class="mui-table-view-cell"><%= result[i]%></li>
+        <% } %>
+    </script>
 </body>
 </html>
